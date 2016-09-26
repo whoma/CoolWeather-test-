@@ -93,9 +93,9 @@ public class CoolWeatherDB {
         if (city != null) {
             ContentValues values = new ContentValues();
             values.put("city_name", city.getCityName());
-            values.put("city_name", city.getCityCode());
+            values.put("city_code", city.getCityCode());
             values.put("province_id", city.getProvinceId());
-            db.insert("city", null, null);
+            db.insert("city", null, values);
         }
     }
 
